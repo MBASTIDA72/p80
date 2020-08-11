@@ -28,6 +28,9 @@ app.get("/:valorsensor1",(req,res)=>{
         let status="Seguro"
         console.log(status)
         StatusController.add({distancia,status})
+          .then(res => {
+            console.log(res)
+          })
       }
       return res.send("pluvial").end()
 })
